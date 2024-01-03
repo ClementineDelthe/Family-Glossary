@@ -7,14 +7,14 @@
   <i class="fas fa-plus" style="color: #130872;"></i>
 </button>
 
-<%# <%= button_to 'Like', like_definition_path(@definition, likeable_type: 'Definition', likeable_id: @definition.id), method: :post, data: { turbo_action: 'replace' } %>
+<%= button_to 'Like', like_definition_path(@definition, likeable_type: 'Definition', likeable_id: @definition.id), method: :post, data: { turbo_action: 'replace' } %>
 
-<%# <%= button_to 'Unlike', like_definition_path(@definition, likeable_type: 'Definition', likeable_id: @definition.id), method: :delete, data: { turbo_action: 'replace' } %>
+<%= button_to 'Unlike', like_definition_path(@definition, likeable_type: 'Definition', likeable_id: @definition.id), method: :delete, data: { turbo_action: 'replace' } %>
 
 
-<%# <p><%= pluralize(@definition.likes.count, 'like') %> </p>
-<%# <% if user_signed_in? %>
-      <%# <% if current_user && @definition.likes.exists?(user_id: current_user.id) %>
-      <%# <% else %>
-      <%# <% end %>
-    <%# <% end %>
+<p><%= pluralize(@definition.likes.count, 'like') %> </p>
+<% if user_signed_in? %>
+      <% if current_user && @definition.likes.exists?(user_id: current_user.id) %>
+      <% else %>
+      <% end %>
+    <% end %>
