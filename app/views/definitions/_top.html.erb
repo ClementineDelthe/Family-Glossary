@@ -1,0 +1,7 @@
+<h2>Best Defz</h2>
+<% @definitions.each do |definition|%>
+  <hr>
+  <li ><%= link_to(definition.title, definition_path(definition)) %> - <%= definition.content %>
+  </li>
+  <hr>
+<% end %>

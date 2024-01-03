@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-8">
+      <div class="definition-card">
+        <%= render "definitions/definition", definition: @definition %>
+
+      </div>
+
+      <div class="definition-card">
+        <h3>Nouveau commentaire</h3>
+        <div class="col-md-4 col-12">
+          <%= render partial: "comments/form", locals: { definition: @definition } %>
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div>
+        <h3>Commentaires ✨</h3>
+        <% if @comments.any? %>
+          <% @comments.each do |comment|%>
+          <p><strong><%= comment.user&.name%></strong></p>
+          <p><%= comment.content %></p>
+          <% if comment.present? && comment.persisted? %>
+            <%= button_to '<i class="fa-regular fa-trash-can"></i>'.html_safe, definition_comment_path(@definition, comment), method: :delete, class: "btn-delete", form: { data: { turbo_confirm: "Are you sure?" } } %>
+            <p><%= pluralize(comment.likes.count, 'like') %> 💖</p>
+          <% end %>
+
+          <% end %>
+        <%end%>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,3 @@
+<%= turbo_stream.append "likes" do %>
+ <%= render partial: "like", locals: { like: @like } %>
+<% end %>

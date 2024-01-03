@@ -1,0 +1,22 @@
+.definition-card {
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 10px 15px;
+  background-color: #fff;
+}
+
+#topdef-div {
+  position:fixed;
+  top:10vh;
+  right: 0;
+  height: 10vh;
+}
+
+#def-list {
+  border-right: 15px double $primary;
+}
+
+.btn-delete{
+ border: none !important;
+ background-color: $background;
+}

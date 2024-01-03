@@ -1,0 +1,20 @@
+<!-- Modal -->
+<div class="modal fade" id="createDefinitionModal" tabindex="-1" aria-labelledby="createDefinitionModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title" id="createDefinitionModalLabel">Nouvelle def</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+        <%= simple_form_for(@definition) do |f| %>
+          <div class="modal-body">
+            <%= f.input :title, label: "Mot" %>
+            <%= f.input :content, label: "Description" %>
+          </div>
+          <div class="modal-footer">
+              <%= f.button :submit, "Valider" %>
+          </div>
+      <% end %>
+    </div>
+  </div>
+</div>

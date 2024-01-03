@@ -1,0 +1,31 @@
+  <!-- Update/destroy definition -->
+  <div class="container-edit-delete">
+      <!-- Button -->
+      <div class="d-flex space justify-content-end">
+        <p class="icons-update-delete" data-bs-toggle="modal" data-bs-target="#updateDefinition<%=@definition.id%>"><i class="fa-regular fa-pen-to-square"></i></p>
+        <p class="icons-update-delete"><%= link_to '<i class="fa-regular fa-trash-can"></i>'.html_safe, definition_path(@definition), data: { turbo_method: :delete, turbo_confirm: "Etes vous sûr?" } %></p>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="updateDefinition<%=@definition.id%>" tabindex="-1" aria-labelledby="modificationsDefinition" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title" id="modificationsDefinition">Modifier cette def</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+              <%= simple_form_for @definition do |f| %>
+                <div class="modal-body">
+                  <%= f.input :title %>
+                  <%= f.input :content %>
+                </div>
+                <div class="modal-footer">
+                  <%= f.button :submit, "Valider" %>
+                </div>
+              <% end %>
+
+            </div>
+        </div>
+      </div>
+  </div>
+</div>

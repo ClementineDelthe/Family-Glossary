@@ -1,0 +1,40 @@
+a {
+  text-decoration: none;
+  color: $accent;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+#container-definitions {
+  position: relative;
+  min-height: 90vh;
+}
+
+#btn-new-def {
+  position: absolute;
+  bottom: 0;
+}
+
+// .icons-update-delete {
+//   margin: 5px;
+// }
+
+li {
+  list-style-type: none;
+}
+
+// .btn-plus {
+//   border-radius: 50%;
+//   background-color: $accent;
+//   color: $background;
+// }
+
+.btn-plus:hover {
+  background-color: $secondary;
+}
+
+body {
+  background-color: $background;
+}
