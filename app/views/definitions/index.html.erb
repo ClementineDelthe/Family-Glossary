@@ -12,17 +12,17 @@
     <div id="def-list" class="col-md-8 col-12">
       <%= render "definitions/definitions", definitions: @definitions %>
     </div>
-    <div id="topdef-div" class="col-md-4 col-12">
+    <%# <div id="topdef-div" class="col-md-4 col-12">
       <h2>Hot Defz 🔥</h2>
       <% @top_definitions.each do |definition|%>
-        <hr>
+        <%# <hr>
         <li ><h4><%= link_to(definition.title, definition_path(definition)) %></h4> <i class="fas fa-chevron-right" style="color: #130872;"></i> <%= definition.content %>
-        <br>
+        <%# <br>
         <p><%= pluralize(definition.likes.count, 'like') %> 💖</p>
-        </li>
+        <%# </li>
         <hr>
       <% end %>
-    </div>
+    <%# </div>  %>
 
   </div>
 </div>
