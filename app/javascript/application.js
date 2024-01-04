@@ -1,7 +1,5 @@
 // Configure your import map in config/importmap.rb. Read more: https://github.com/rails/importmap-rails
 import "@hotwired/turbo-rails"
-import "./controllers"
+import "controllers"
 import "@popperjs/core"
 import "bootstrap"
-// import { Application } from "stimulus"
-// window.Stimulus = Application.start()
