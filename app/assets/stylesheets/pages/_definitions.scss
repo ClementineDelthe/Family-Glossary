@@ -1,10 +1,14 @@
 a {
   text-decoration: none;
-  color: $accent;
+  color: #4B7F52;
 }
 
 a:hover {
   cursor: pointer;
+}
+
+h2, h3 {
+  color: #4B7F52;
 }
 
 #container-definitions {
@@ -32,9 +36,63 @@ li {
 // }
 
 .btn-plus:hover {
-  background-color: $secondary;
+  background-color: #4B7F52;
+  border-radius: 50%;
 }
 
 body {
-  background-color: $background;
+  // background-color: $background;
+  // background-color: #607274;
+  // background-color: #8FB996;
+  background-color: whitesmoke;
+}
+
+#modal-def-background {
+  background-color: #8FB996;
+}
+
+#title-new-comment {
+
+}
+
+.button {
+  background-color: #4B7F52;
+  border-radius: 5px;
+  border-color: #4B7F52;
+  color: whitesmoke;
+}
+.button:hover {
+  background-color: #8FB996;
+  color: #4B7F52;
+  border-color: #4B7F52;
+}
+
+#comments-div{
+  color: #4B7F52;
+}
+.bubble-div {
+  border-radius: 15px;
+  border-color: #4B7F52;
+  border: solid 1px #4B7F52;
+  padding: 10px 15px;
+  position: relative;
+  margin-top: 10px;
+  box-shadow: 2px 2px 2px #8FB996;
+
+}
+
+ul {
+
+  padding-inline-start: 0px !important;
+}
+
+#delete-comment-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+input {
+  border-radius: 15px;
+  border: solif 1px #4B7F52;
 }

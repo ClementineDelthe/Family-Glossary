@@ -1,34 +1,47 @@
 <div class="container">
   <div class="row mt-5">
-    <div class="col-8">
+    <div class="col-12">
       <div class="definition-card">
         <%= render "definitions/definition", definition: @definition %>
 
       </div>
 
-      <div class="definition-card">
-        <h3>Nouveau commentaire</h3>
-        <div class="col-md-4 col-12">
-          <%= render partial: "comments/form", locals: { definition: @definition } %>
-        </div>
-      </div>
-    </div>
-    <div class="col-4">
-      <div>
-        <h3>Commentaires ✨</h3>
+      <hr class="mt-4">
+      <h3 class="mt-1" id="title-new-comment">Commentaires ✨</h3>
+
+      <div id="comments-div">
         <% if @comments.any? %>
           <% @comments.each do |comment|%>
-          <p><strong><%= comment.user&.name%></strong></p>
-          <p><%= comment.content %></p>
-          <% if comment.present? && comment.persisted? %>
-            <%= button_to '<i class="fa-regular fa-trash-can"></i>'.html_safe, definition_comment_path(@definition, comment), method: :delete, class: "btn-delete", form: { data: { turbo_confirm: "Are you sure?" } } %>
-            <p><%= pluralize(comment.likes.count, 'like') %> 💖</p>
-          <% end %>
-
+            <div class="bubble-div">
+            <p><strong><%= comment.user&.name%></strong></p>
+            <p><%= comment.content %></p>
+              <% if comment.present? && comment.persisted? && (comment.user == current_user) %>
+                <%= button_to '<i class="fa-regular fa-trash-can" style="color: #4B7F52;"></i>'.html_safe, definition_comment_path(@definition, comment), method: :delete, class: "btn-delete", id: "delete-comment-btn", form: { data: { turbo_confirm: "Are you sure?" } } %>
+                <%# <p><%= pluralize(comment.likes.count, 'like') 💖</p> %>
+              <% end %>
+            </div>
           <% end %>
         <%end%>
       </div>
+
+      <div data-controller="new-comment mt-2">
+        <button class="button mt-2"
+        data-action="click->new-comment#showNewComment"
+        data-new-comment-target="btnNewComment">
+          Nouveau commentaire
+        </button>
+
+        <div class="definition-card mt-3 d-none"
+        data-new-comment-target="newCommentDiv">
+          <h3>Nouveau commentaire</h3>
+          <div class="col-md-4 col-12">
+            <%= render partial: "comments/form", locals: { definition: @definition } %>
+          </div>
+        </div>
+      </div>
+      <%# </div>
+      </div> %>
+
     </div>
   </div>
-
 </div>
