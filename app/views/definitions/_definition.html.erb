@@ -1,5 +1,12 @@
 <h2><strong><%= @definition.title %></strong></h2>
 <p><i class="fas fa-chevron-right" style="color: #4B7F52;"></i> <%= @definition.content %></p>
+<p><%= @definition.user.name%> - <%= @definition.created_at.in_time_zone("Europe/Paris").strftime("%d/%m/%y à %H:%M") %></p>
+
+<% if @definition.user == current_user %>
+    <div class="">
+      <%= render "definitions/definition_update_destroy", definition: @definition %>
+    </div>
+<% end %>
 
 <%# <button type="button" class="btn btn-plus" data-bs-toggle="modal" data-bs-target="#updateDefinition">
   <i class="fas fa-plus" style="color: #130872;"></i>

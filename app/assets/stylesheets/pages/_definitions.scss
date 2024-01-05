@@ -12,8 +12,8 @@ h2, h3 {
 }
 
 #container-definitions {
-  position: relative;
-  min-height: 90vh;
+  // position: relative;
+  // min-height: 90vh;
 }
 
 #btn-new-def {
@@ -38,6 +38,11 @@ li {
 .btn-plus:hover {
   background-color: #4B7F52;
   border-radius: 50%;
+  color: white;
+}
+
+#createDefinitionModal {
+  color: white;
 }
 
 body {
@@ -78,7 +83,10 @@ body {
   position: relative;
   margin-top: 10px;
   box-shadow: 2px 2px 2px #8FB996;
+}
 
+.definition-card {
+  position: relative;
 }
 
 ul {
@@ -87,6 +95,12 @@ ul {
 }
 
 #delete-comment-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+#def-update-destroy-icons {
   position: absolute;
   top: 10px;
   right: 10px;

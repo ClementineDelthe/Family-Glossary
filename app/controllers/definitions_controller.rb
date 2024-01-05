@@ -35,7 +35,7 @@ class DefinitionsController < ApplicationController
 
   def destroy
     @definition.destroy
-    redirect_to definitions_path, status: :see_other
+    redirect_to root_path, status: :see_other
   end
 
   def set_definition
