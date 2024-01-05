@@ -1,5 +1,4 @@
 <h1>WHAT THE DEF</h1>
-<hr>
 <p>WHAT THE DEF is a Family Glossary. Its aim is to exchange definitions discovered through readings or talks in between members of a family.</p>
 
 <p>Inspired by a mom that tends to forget things, writes it down in notebooks and then forgets it again.</p>
@@ -10,7 +9,6 @@
     <li>Comments: each user can comment on any definition</li>
 </ul>
 
-<hr>
 <h2>Technologies</h2>
 <ul>
   <li>A ruby on rails MVC</li>
