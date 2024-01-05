@@ -19,6 +19,6 @@
 </ul>
 
 <p>---</p>
-<p>You can check it here : https://www.whatthedef.com/</p>
+<p>You can check it here : www.whatthedef.com</p>
 
 
