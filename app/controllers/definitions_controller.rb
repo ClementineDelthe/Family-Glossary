@@ -2,7 +2,8 @@ class DefinitionsController < ApplicationController
   before_action :set_definition, only: %i[show edit update destroy like unlike]
 
   def index
-    @definitions = Definition.all.reverse_order
+    # @definitions = Definition.all.reverse_order
+    @definitions = Definition.order(title: :asc).all
     # action definitions#new
     @definition = Definition.new
     @top_definitions = Definition.left_joins(:likes).group(:id).order('COUNT(likes.id) DESC').limit(3)
