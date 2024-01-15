@@ -21,8 +21,8 @@
 <p>---</p>
 <p>You can check it here : www.whatthedef.com</p>
 <div style="display: flex">
-<img src="app/assets/images/mobile.png" width="200" height="500"/>
-<img src="app/assets/images/mobile1.png" width="200" height="500"/>
-<img src="app/assets/images/mobile2.png" width="200" height="500"/>
-<img src="app/assets/images/mobile3.png" width="200" height="500"/>
+<img src="app/assets/images/mobile.png" width="200" height="450"/>
+<img src="app/assets/images/mobile1.png" width="200" height="450"/>
+<img src="app/assets/images/mobile2.png" width="200" height="450"/>
+<img src="app/assets/images/mobile3.png" width="200" height="450"/>
 </div>
