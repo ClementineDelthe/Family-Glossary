@@ -20,3 +20,11 @@
 
 <p>---</p>
 <p>You can check it here : www.whatthedef.com</p>
+<div style="display: flex">
+<img src="app/assets/images/mobile.png"/>
+<img src="app/assets/images/mobile1.png"/>
+<img src="app/assets/images/mobile2.png"/>
+<img src="app/assets/images/mobile3.png"/>
+<!-- <img src="app/assets/images/message.gif" width="200" height="500"/>
+<img src="app/assets/images/mobile.gif" width="200" height="500"/> -->
+</div>
